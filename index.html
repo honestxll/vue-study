@@ -9,16 +9,18 @@
 </head>
 <body>
   <div class="ui container">
-    <div class="ui hidden divider">
-      <div class="ui items">
-        <family
-          v-for="person in family"
-          v-bind:person="person"
-        ></family>
-      </div>
+    <div class="ui hidden divider"></div>
+
+    <div class="ui secondary pointing menu">
+      <router-link class="item" active-class="active" to="/" exact>首页</router-link>
+      <router-link class="item" active-class="active" to="/event">活动</router-link>
+      <router-link class="item" active-class="active" to="/about">关于</router-link>
+      <router-link class="item" active-class="active" :to="{ name: 'art' }">文章</router-link>
     </div>
+    <router-view class="ui stacked segment"></router-view>
   </div>
   <script src="./vue.js"></script>
+  <script src="./vue-router.js"></script>
   <script src="./index.js"></script>
 </body>
 </html>
