@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue 再次学习</title>
+  <link rel="stylesheet" href="./semantic.min.css">
+</head>
+<body>
+  <div class="ui container">
+    <div class="ui hidden divider">
+      <div class="ui items">
+        <family
+          v-for="person in family"
+          v-bind:person="person"
+        ></family>
+      </div>
+    </div>
+  </div>
+  <script src="./vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>

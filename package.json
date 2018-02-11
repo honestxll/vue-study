@@ -1,0 +1,9 @@
+{
+  "name": "vue",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "browser-sync start --server --no-notify --files='index.html, index.js'"
+  }
+}
