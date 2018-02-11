@@ -9,14 +9,27 @@
 </head>
 <body>
   <div class="ui container">
-    <div class="ui hidden divider">
-      <div class="ui items">
-        <family
-          v-for="person in family"
-          v-bind:person="person"
-        ></family>
-      </div>
-    </div>
+    <div class="ui hidden divider"></div>
+
+    <ui-button></ui-button>
+    <ui-button text="你好"></ui-button>
+    <ui-button :text="tag ? '成功' : '失败'"></ui-button>
+
+    <div class="ui divider"></div>
+
+    <num-button @add="addTotal"></num-button>
+    <num-button @add="addTotal"></num-button>
+    <div class="ui red circular label">{{ total }}</div>
+
+    <div class="ui divider"></div>
+
+    <segment>
+      <h1>你好</h1>
+      <p slot="content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum eaque, maxime officiis sapiente fugit fugiat eligendi perspiciatis unde, facere error ab quasi provident! Dolor, facilis sapiente praesentium voluptates fuga doloremque?
+      </p>
+    </segment>
+
   </div>
   <script src="./vue.js"></script>
   <script src="./index.js"></script>
