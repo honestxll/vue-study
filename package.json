@@ -4,6 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "browser-sync start --server --no-notify --files='index.html, index.js'"
+    "dev": "browser-sync start --server --no-notify --files='index.html, *.js'"
   }
 }
