@@ -10,12 +10,19 @@
 <body>
   <div class="ui container">
     <div class="ui hidden divider">
-      <div class="ui items">
+
+      <transition-group
+        name="list"
+        tag="div"
+        class="ui items"
+      >
         <family
-          v-for="person in family"
+          v-for="(person, index) in family"
+          v-bind:key="index"
           v-bind:person="person"
+          v-show="tag"
         ></family>
-      </div>
+      </transition-group>
     </div>
   </div>
   <script src="./vue.js"></script>

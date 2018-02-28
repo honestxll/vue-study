@@ -5,6 +5,7 @@ Vue.component('family', {
 var app = new Vue({
   el: '.ui.container',
   data: {
+    tag: false,
     family: [
       { name: '陈实', age: 24 },
       { name: '徐露露', age: 25 },
