@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vue 再次学习</title>
   <link rel="stylesheet" href="./semantic.min.css">
+  <style>
+    .list-item {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .list-enter-active,
+    .list-leave-active {
+      transition: all 1s;
+    }
+
+    .list-enter,
+    .list-leave-to
+    {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  </style>
 </head>
+
 <body>
   <div class="ui container">
     <div class="ui hidden divider">
-
-      <transition-group
-        name="list"
-        tag="div"
-        class="ui items"
-      >
-        <family
-          v-for="(person, index) in family"
-          v-bind:key="index"
-          v-bind:person="person"
-          v-show="tag"
-        ></family>
+      <div class="ui two buttons">
+        <button class="ui positive button" @click="add">添加</button>
+        <button class="ui negative button" @click="rm">删除</button>
+      </div>
+      <div class="ui hidden section"></div>
+      <transition-group name="list" tag="div" class="ui items">
+        <family v-for="(person, index) in family" v-bind:key="index" v-bind:person="person" v-show="tag"></family>
       </transition-group>
     </div>
   </div>
   <script src="./vue.js"></script>
   <script src="./index.js"></script>
 </body>
+
 </html>
